@@ -36,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   initState() {
+    super.initState();
     print('Initializing state');
     print('Getting snippets');
     _getSnippets();

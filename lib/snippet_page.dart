@@ -21,6 +21,7 @@ class _SnippetPageState extends State<SnippetPage> {
 
   @override
   initState() {
+    super.initState();
     _done = false;
     _markdown = new StringBuffer();
     _getSnippet();
@@ -49,7 +50,7 @@ class _SnippetPageState extends State<SnippetPage> {
     // Convert each line by line
     data['content'].split('\n').forEach((String b64) {
       String text = UTF8.fuse(BASE64).decode(b64);
-      _markdown.writeln(text);
+      _markdown.write(text);
     });
 
     setState(() {
